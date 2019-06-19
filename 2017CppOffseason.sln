@@ -1,0 +1,20 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "frcUserProgramExe", "C:\Users\Prateek M\Documents\Git\5190GreenHopeRobotics\2017CppOffseason\frcUserProgramExe.vcxproj", "{851F719B-CB9A-34A0-9C28-15A6A4C62ED9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|Win32=debug|Win32
+		release|Win32=release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{851F719B-CB9A-34A0-9C28-15A6A4C62ED9}.debug|Win32.ActiveCfg = debug|Win32
+		{851F719B-CB9A-34A0-9C28-15A6A4C62ED9}.debug|Win32.Build.0 = debug|Win32
+		{851F719B-CB9A-34A0-9C28-15A6A4C62ED9}.release|Win32.ActiveCfg = release|Win32
+		{851F719B-CB9A-34A0-9C28-15A6A4C62ED9}.release|Win32.Build.0 = release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
