@@ -9,8 +9,8 @@ std::shared_ptr<Agitator> Robot::agitator_;
 
 void Robot::RobotInit() {
     drivetrain_.reset(new Drivetrain);
-    flywheel_.reset(new frc5190::Flywheel);
-    agitator_.reset(new frc5190::Agitator);
+    flywheel_.reset(new Flywheel);
+    agitator_.reset(new Agitator);
 
     flywheel_->InitLoop();
 }
