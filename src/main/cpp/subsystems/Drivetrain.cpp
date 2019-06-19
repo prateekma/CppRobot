@@ -1,5 +1,7 @@
 #include "subsystems/Drivetrain.h"
 #include "commands/DriveCommands.h"
+#include <vector>
+#include <iostream>
 
 using namespace frc5190;
 
@@ -12,15 +14,15 @@ Drivetrain::Drivetrain() : Subsystem("Drivetrain") {
     right_master_.SetInverted(true);
     right_slave_.SetInverted(true);
 
-    left_master_.ConfigContinuousCurrentLimit(38);
-    left_master_.ConfigPeakCurrentLimit(60);
-    left_master_.ConfigPeakCurrentDuration(0.5);
-    left_master_.EnableCurrentLimit(true);
+    std::vector<TalonSRX*> all_motors{&left_master_, &left_slave_,
+                                      &right_master_, &right_slave_};
 
-    right_master_.ConfigContinuousCurrentLimit(38);
-    right_master_.ConfigPeakCurrentLimit(60);
-    right_master_.ConfigPeakCurrentDuration(0.5);
-    right_master_.EnableCurrentLimit(true);
+    for (const auto& motor : all_motors) {
+        motor->ConfigContinuousCurrentLimit(38);
+        motor->ConfigPeakCurrentLimit(60);
+        motor->ConfigPeakCurrentDuration(0.5);
+        motor->EnableCurrentLimit(true);
+    }
 }
 
 void Drivetrain::Periodic() {
